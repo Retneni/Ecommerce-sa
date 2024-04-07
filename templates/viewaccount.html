@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Complaint Analysis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../static/css/coin-slider.css" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/coin-slider.min.js"></script>
+</head>
+<body>
+      
+          
+    
+        <div class="main">
+        <div class="header">
+        <div class="header_resize">
+
+        <div class="logo">
+        <h1>Complaint Analysis</h1>
+        </div>
+        <div class="clr"></div>
+        <div class="menu_nav">
+        <ul>
+        <li><a href="/userhome.html"><span>Home </span></a></li>
+        <li class="active"><a href="#.html">{{session['username']}}</a></li>
+        <li><a href="/user.html">Logout</a></li>
+        </ul>
+        </div>
+        <div class="clr"></div>
+        <div class="slider">
+        <div id="coin-slider"> 
+        <a href="#"><img src="../static/images/slide1.jpg" width="960" height="360" alt="" /></a>
+        
+        <div class="clr"></div>
+        </div>
+        <div class="clr"></div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="content_resize">
+        <div class="mainbar">
+        <div class="article">
+          
+           
+ <table width="601" border="1.5" align="center"  cellpadding="0" cellspacing="0"  >
+ 
+   
+        
+                     <br/><br/>
+                    <center> <h2>View Account Details</h2></center>
+                   
+                    <br/><br/> 
+                    {% for username,branch,email,address,mobile,amount in accounts %}
+        <tr>
+            
+        <td  width="131" valign="middle" height="48" style="color: #00CC99;"><div align="left" class="style8 style7 style14" style="margin-left:20px;">
+        <strong><font color="black"> Username : </font></strong></div></td>
+	<td  width="166" valign="middle" height="48" ><div align="left" class="style11" style="margin-left:20px;"> 
+                  <input type="text" name="username" size="25" id="category" readonly="" value="{{username}}"> </div></td>
+        </tr>
+        
+        <tr>
+        <td  width="131" valign="middle" height="48" style="color: #00CC99;"><div align="left" class="style8 style7 style14" style="margin-left:20px;">
+        <strong><font color="black">Branch : </font></strong></div></td>
+        <td  width="166" valign="middle" height="48" ><div align="left" class="style11" style="margin-left:20px;">
+        <input type="text" name="branch" size="25" id="gender" readonly="" value="{{branch}}"></div></td>
+        </tr>
+        
+        <tr>
+        <td  width="131" valign="middle" height="51" style="color: #00CC99;"><div align="left" class="style8 style7 style14" style="margin-left:20px;">
+        <strong><font color="black">Email : </font></strong></div></td>
+        <td  width="166" valign="middle" height="51"><div align="left" class="style11" style="margin-left:20px;">
+        <input type="text" name="email" id="description" size="25" readonly="" value="{{email}}"></div></td>
+        </tr>
+        
+        <tr>
+        <td  width="131" valign="middle" height="51" style="color: #00CC99;"><div align="left" class="style8 style7 style14" style="margin-left:20px;">
+        <strong><font color="black"> Address : </font></strong></div></td>
+        <td  width="166" valign="middle" height="51"><div align="left" class="style11" style="margin-left:20px;">
+        <input type="text" name="address" id="price" size="25" readonly="" value="{{address}}"></div></td>
+        </tr>
+        
+        <tr>
+        <td  width="131" valign="middle" height="51" style="color: #00CC99;"><div align="left" class="style8 style7 style14" style="margin-left:20px;">
+        <strong><font color="black">Amount : </font></strong></div></td>
+        <td  width="166" valign="middle" height="51"><div align="left" class="style11" style="margin-left:20px;">
+        <input type="text" name="amount" id="brand" size="25" readonly="" value="{{amount}}"></div></td>
+        </tr>
+        {% endfor %}
+        
+        </table> 
+        <!-- <table border="2" width="90%">
+    
+            <tr style="background-color: brown">
+            <th><font color="white">username</th>
+            <th><font color="white">branch</th>
+            <th><font color="white">email</th>
+            <th><font color="white">address</th>
+            <th><font color="white">mobile</th>
+            <th><font color="white">amount</th>
+           
+            
+        </tr>
+        {% for username,branch,email,address,mobile,amount in accounts %}
+
+<tr>
+
+<td>{{username}}</td>
+<td>{{branch}}</td>
+<td>{{email}}</td>
+<td>{{address}}</td>
+<td>{{mobile}}</td>
+<td>{{amount}}</td>
+
+</tr>
+{% endfor %}
+
+</table>
+
+</center>
+
+<br/><br/><br/><br/><br/><br/>
+
+<center><h2 class="style6">Sorry..!! Nothing To Display</h2></center>
+
+
+</table> -->
+        <br/><br/>
+        
+        <center><a href="managebankacount.html"> <font size="4" color="green">Back</font></a></center>
+        
+        <div class="clr"></div>
+        </div>
+
+        </div>
+        <div class="sidebar">
+        <div class="gadget">  
+            
+        
+        <h2 class="star"><span>User</span> Menu</h2>
+        <div class="clr"></div>
+        <ul class="sb_menu">
+        <li><a href="/userhome.html">Home</a></li>
+        <li><a href="/managebankacount.html">Manage Bank Account</a></li>
+        <li><a href="/searchproducts.html">Search Products</a></li>
+        
+        <li><a href="/viewcartproducts.html">Purchase Cart Products</a></li>
+        <li><a href="/viewpurchasedproducts.html">My Purchased Products</a></li>
+        <li><a href="/user.html">Logout</a></li>
+        </ul>
+        </div> 
+        </div>
+        <div class="clr"></div>
+        </div>
+        </div>
+
+        <div class="footer">
+        <div class="footer_resize">
+         
+        <div style="clear:both;"></div>
+        </div>
+        </div>
+        
+        </div>
+        
+</body>
+</html>
+        

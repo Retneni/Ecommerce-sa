@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Complaint Analysis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css"  href="../static/css/coin-slider.css" />
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/droid_sans_400-droid_sans_700.font.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/coin-slider.min.js"></script>
+</head>
+    
+    <style>
+        
+        a {
+            text-decoration: none;
+            
+        }
+        
+        
+    </style>
+<body>
+    
+        
+            
+        <div class="main">
+        <div class="header">
+        <div class="header_resize">
+
+        <div class="logo">
+        <h1>Complaint Analysis</h1>
+        </div>
+        <div class="clr"></div>
+        <div class="menu_nav">
+        <ul>
+        <li><a href="/adminhome.html"><span>Home</span></a></li>
+        <li class="active"><a href="#">Admin</a></li>
+        <li><a href="/admin.html">Logout</a></li>
+        </ul>
+        </div>
+        <div class="clr"></div>
+        <div class="slider">
+        <div id="coin-slider"> 
+        <a href="#"><img src="../static/images/slide1.jpg" width="960" height="360" alt="" /></a> 
+        </div>
+        <div class="clr"></div>
+        </div>
+        <div class="clr"></div>
+        </div>
+        </div>
+        <div class="content">
+        <div class="content_resize">
+        <div class="mainbar">
+        <div class="article">
+        
+            <br/> <br/> 
+    
+        
+            <center>
+                {% if products %}
+            <h2><font color="black" size="5"> All Products</font></h2>
+            <br/>
+            <style>
+                td{
+                    text-align: center;
+                }
+                
+            </style>
+                        <table border="2" width="90%">
+    
+                                <tr style="background-color: brown">
+                                <th><font color="white">image</th>
+                                <th><font color="white">productname</th>
+                                <th><font color="white">Category</th>
+                                <th><font color="white">price</th>
+                                <th><font color="white">description</th>
+                                <th><font color="white">Brand</th>
+                                <th><font color="white">Delete</th>
+                               
+                                
+                            </tr>
+                            {% for id,category,productname,description,price,brand,image in products %}
+    
+        <tr>
+             <td><img src="../static/Product Images/{{image}}" style="width:100px;height: 100px;"></img></td>
+             <td>{{productname}}</td>
+             <td>{{category}}</td>
+             <td>{{price}}</td>
+             <td>{{description}}</td>
+             <td>{{brand}}</td>
+             <td><a href="{{ url_for('adelete',category=category,productname=productname,price=price) }}">Delete</a></td>
+            </tr>
+            {% endfor %}
+               
+               </table>
+               {% endif %}
+            </center>
+           
+            <br/><br/><br/><br/><br/><br/>
+            
+          
+            
+
+      </table>
+        <br/><br/><br/><br/>
+        
+        <div class="clr"></div>
+        </div>
+
+        </div>
+        <div class="sidebar">
+        <div class="gadget">
+        <h2 class="star"><span>Admin</span> Menu</h2>
+        <div class="clr"></div>
+        <ul class="sb_menu">
+            <li><a href="/adminhome.html">Home</a></li>
+            <li><a href="/viewusers.html">View all Users & Activate</a></li>
+            <li><a href="/addcategory.html">Add Category</a></li>
+            <li><a href="/addproducts.html">Add Products</a></li>
+            <li><a href="/viewproducts.html">View all Products</a></li>
+            <li><a href="/adminviewpurchasedproducts.html">View Purchased Products </a></li>
+            <li><a href="/revw.html">View Reviews </a></li>
+            <li><a href="/pcount.html">Count </a></li>
+            <li><a href="/admin.html">Logout</a></li>
+            </ul>
+        </div> 
+        </div>
+        <div class="clr"></div>
+        </div>
+        </div>
+
+        <div class="footer">
+        <div class="footer_resize">
+         
+        <div style="clear:both;"></div>
+        </div>
+        </div>
+        </div>
+        
+</body>
+</html>
